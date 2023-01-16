@@ -1,0 +1,13 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kronix hub", "BloodTheme")
+
+local Tab2 = Window:NewTab("LocalPlayer")
+local Section2 = Tab2:NewSection("LocalPlayer")
+
+Section2:NewSlider("Sped", "SlideSpeed", 300, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section2:NewSlider("JumpPower", "SlideJumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
